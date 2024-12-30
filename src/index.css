@@ -2,10 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-    --black: #000000;
-    --white: #FFFFFF;
-    --purple-light:#D1A7E3;
-    --Purple:#800080;
-    --purple-contrast:#5A2D87;
-  }

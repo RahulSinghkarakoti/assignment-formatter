@@ -87,7 +87,7 @@ function ListGroup({ editor }) {
             </button>
             <button
               onClick={() => handleAlign("center")}
-              className={`w-full p-2 text-sm border-x-2 border-zinc-400 ${
+              className={`w-full p-2 text-sm   ${
                 editor.isActive({ textAlign: "center" }) ? "bg-gray-400" : ""
               }`}
             >

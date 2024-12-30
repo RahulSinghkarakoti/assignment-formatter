@@ -99,6 +99,7 @@ function Editor() {
             <h2><strong>Output:</strong></h2>
             <pre><code>${item.output}</code></pre>
           </div>
+          <p></p>
           
         `;
         })
@@ -159,7 +160,7 @@ function Editor() {
       )}
 
       {/* toolbar of editor */}
-      <div className=" bg-white text-white   shadow-md flex justify-between items-center rounded-md p-1 gap-1 ">
+      <div className=" bg-white text-white   shadow-md shadow-zinc-700 flex  justify-between items-center rounded-md p-1 gap-1 ">
         <HeadingDropdown editor={editor} />
         <TextColor editor={editor} />
         <TextFormattingToolbar editor={editor} />

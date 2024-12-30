@@ -1,3 +1,12 @@
+:root {
+  --black: #000000;
+  --white: #FFFFFF;
+  --purple-light:#D1A7E3;
+  --Purple:#800080;
+  --purple-contrast:#5A2D87;
+}
+
+
 * {
   margin: 0%;
   padding: 0%;
@@ -12,6 +21,8 @@
   :first-child {
     margin-top: 0;
   }
+   
+  
 
   pre {
     background: var(--black);
@@ -52,15 +63,8 @@ ol {
   list-style-type: decimal;
   padding-left: 20px;
 }
-/* Global Styles for Text */
-body {
-  /* font-family: 'Arial', sans-serif; Replace with your desired professional font */
-  line-height: 1.6;
-  
-  margin: 0;
-  padding: 0;
-  background-color: #f4f7fa; /* Light background for better contrast */
-}
+
+ 
 
 /* Title */
 h1 {
@@ -72,20 +76,20 @@ h1 {
   text-transform: capitalize; /* Ensures first letter of each word is capitalized */
 }
 
-/* Main Heading */
+/*  Heading */
 h2 {
   font-size: 1.5rem; /* Slightly smaller than h1 */
   font-weight: 500; /* Semi-bold for a professional feel */
-  line-height: 1.0;
+  line-height: 2.0;
   color: #243a50; /* Lighter than h1 for hierarchy */
   text-transform: capitalize;
 }
 
-/* Subheading */
+/* SubTitle */
 h3 {
-  font-size: 1.5rem; /* Moderate size, more readable */
+  font-size: 1.3rem; /* Moderate size, more readable */
   font-weight: 500; /* Regular weight */
-  line-height: 1.0;
+  line-height: 2.0;
   color: #7f8c8d; /* Muted color for subordination */
   text-transform: capitalize;
 }
