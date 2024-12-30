@@ -2,18 +2,18 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   data: [
-    {
-      id: "m5yde6901",
-      question: "Write a program to sort a string in JavaScript",
-      code: `function sortString(str) {
-  return str.split('').sort().join('');
+    
+  {
+      id: "m5yde6902",
+      question: "Write a function to reverse a string in JavaScript",
+      code: `function reverseString(str) {
+return str.split('').reverse().join('');
 }
 
-const sortedString = sortString('example');
-console.log(sortedString);  
-`,
-      output: "aeelmpx",
-    },
+const reversedString = reverseString('hello');
+console.log(reversedString);`,
+      output: "olleh"
+  }, 
   ],
 };
 

@@ -1,7 +1,7 @@
 import "./App.css";
 import { Form,   Preview } from "./components";
 import {Provider} from 'react-redux'
-import store from './store/DataStore'
+import store from './store/Store'
 import TopBtn from "./components/TopBtn";
 function App() {
   return (

@@ -35,11 +35,11 @@ function ListGroup({ editor }) {
   };
 
   return (
-    <div className=" flex justify-between items-center gap-1 px-2 border-r-2 border-gray-400 bg-white text-md font-medium text-gray-700  ">
+    <div className=" flex justify-between items-center gap-1 p-1  h-full border-r-2 border-gray-400 bg-white text-md font-medium text-gray-700  ">
       <div className="flex items-center justify-between gap-1">
         <button
           onClick={() => editor.chain().focus().toggleBulletList().run()}
-          className={` shadow-sm hover:bg-gray-200 p-1 rounded-md ${
+          className={` shadow-sm hover:bg-gray-200 p-1  rounded-md ${
             editor.isActive("bulletList") ? "is-active bg-gray-400" : ""
           }`}
         >
@@ -47,7 +47,7 @@ function ListGroup({ editor }) {
         </button>
         <button
           onClick={() => editor.chain().focus().toggleOrderedList().run()}
-          className={` shadow-sm hover:bg-gray-200 p-1 rounded-md ${
+          className={` shadow-sm hover:bg-gray-200  p-1 rounded-md ${
             editor.isActive("orderedList") ? "is-active bg-gray-400" : ""
           }`}
         >
@@ -58,7 +58,7 @@ function ListGroup({ editor }) {
       <div className="relative">
         <button
           onClick={toggleDropdown}
-          className={`shadow-sm hover:bg-gray-200 p-1 rounded-md relative`}
+          className={`shadow-sm hover:bg-gray-200  p-1 rounded-md relative`}
         >
            {/* Display current alignment icon */}
           {getCurrentAlignmentIcon()}

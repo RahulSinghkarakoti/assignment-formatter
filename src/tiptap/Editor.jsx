@@ -21,8 +21,7 @@ import Link from "@tiptap/extension-link";
 import LinkBtn from "./LinkBtn";
 import UndoRedo from "./UndoRedo";
 import HorizontalRule from "@tiptap/extension-horizontal-rule";
-import Placeholder from '@tiptap/extension-placeholder'
-
+import Placeholder from '@tiptap/extension-placeholder' 
 
 import {
   Bold as BoldIcon,
@@ -33,11 +32,13 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { setEditor } from "../store/EditorSlice";
+import { CustomDiv } from "./CustomDiv";
 
 function Editor() {
 
   //all the tiptap extensions to be used
   const extensions = [
+    CustomDiv,
     StarterKit,
     Document,
     Bold,
@@ -87,15 +88,15 @@ function Editor() {
       const content = data
         .map((item, index) => {
           return `
-          <div>
+          <div data-type="custom-div" class="customDiv" >
             <h2><strong>Question ${index + 1}:</strong></h2>
             <p>${item.question}</p>
           </div>
-          <div>
+          <div data-type="custom-div" class="classDiv">
             <h2><strong>Code:</strong></h2>
             <pre><code>${item.code}</code></pre>
           </div>
-          <div>
+          <div data-type="custom-div" class="classDiv">
             <h2><strong>Output:</strong></h2>
             <pre><code>${item.output}</code></pre>
           </div>
@@ -160,7 +161,7 @@ function Editor() {
       )}
 
       {/* toolbar of editor */}
-      <div className=" bg-white text-white   shadow-md shadow-zinc-700 flex  justify-between items-center rounded-md p-1 gap-1 ">
+      <div className="   shadow-md shadow-zinc-700 flex  justify-between items-center rounded-md p-1 gap-1 ">
         <HeadingDropdown editor={editor} />
         <TextColor editor={editor} />
         <TextFormattingToolbar editor={editor} />
@@ -173,7 +174,7 @@ function Editor() {
       {editor && (
         <EditorContent
           ref={editor.editorRef}
-          className=" rounded-md my-2 p-2 border-2 border-gray-300  bg-gray-100    "
+          className=" rounded-md my-2 px-2 border-2 border-gray-300  bg-gray-100    "
           editor={editor}
         />
       )}
