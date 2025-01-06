@@ -66,7 +66,6 @@ function Editor() {
       openOnClick: false,
       autolink: true,
       defaultProtocol: "https",
-      protocols: ["http", "https"],
       
     }),
   ];
@@ -84,6 +83,7 @@ function Editor() {
 
   //presenting the content according to the question data in store
   useEffect(() => {
+    console.log("object")
     if (editor && data) {
       const content = data
         .map((item, index) => {
@@ -110,7 +110,7 @@ function Editor() {
     }
 
     if (editor) dispatch(setEditor(editor)); //dispatch the ediotr 
-  }, [editor, data]);
+  }, [editor, data,dispatch]);
 
 
   if (!editor) {

@@ -63,7 +63,7 @@ const HeadingDropdown = ({ editor }) => {
         getSelectedOption(); // Log the tag name whenever the selection changes
       });
     }
-  }, [editor]);
+  }, [editor,getSelectedOption]);
 
   return (
     <div className="relative  w-32   ">
